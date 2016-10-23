@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #2b2b2b;
+    /*    url('../images/tweed.png') 0/contain repeat;*/
+    font-size: 16px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.card-placeholder {
+    background-color: #ccc;
+    border: 1px solid #bbb;
+}
+.list-group {
+    list-style-type: none;
+}
+.list-group-item {
+    color: black;
+    font-size: 14px;
+    width:350px;
+    margin: 5px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    border-radius:none;
+    cursor: pointer;
+}
+
+.btn {
+    margin: 15px;
+}
+
+.btn-warning {
+    float: right;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: crimson;
+    text-decoration: underline;
+}
