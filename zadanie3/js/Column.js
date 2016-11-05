@@ -29,7 +29,7 @@
  }
  Column.prototype = {
      addCard: function (card) {
-         this.$element.children('ul').append(card.$element);
+         this.$element.find('ul').append(card.$element);
      }, 
      removeColumn: function () {
          this.$element.remove();
