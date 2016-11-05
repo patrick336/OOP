@@ -1,51 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900&subset=latin-ext');
 * {
     box-sizing: border-box;
 }
 
 body {
-    background: #2b2b2b;
-    /*    url('../images/tweed.png') 0/contain repeat;*/
-    font-size: 16px;
-    text-align: center;
-    color: aliceblue;
+    margin: 0;
+    background: #009688;
+    color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
 }
 
-.card-placeholder {
-    background-color: #ccc;
-    border: 1px solid #bbb;
+.main-header {
+    word-spacing: 5px;
+    letter-spacing: 5px;
+    background: rgb(87, 171, 163);
+    text-shadow: 3px 3px 3px #2b2b2b;
+    width:60%;
+    max-width: 600px;
+    margin: 0 auto 20px;
 }
-.list-group {
-    list-style-type: none;
+
+.text-center {
+    text-align: center;
 }
-.list-group-item {
-    color: black;
-    font-size: 14px;
-    width:350px;
-    margin: 5px;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-    border-radius:none;
-    cursor: pointer;
+
+.block-center {
+    display: block;
+    margin: 10px auto;
 }
 
 .btn {
-    margin: 15px;
+    padding: 5px 10px;
 }
 
-.btn-warning {
-    float: right;
+.column {
+    position: relative;
+    /*    width: 300px;*/
+    min-height: 40vh;
+    border-radius: 5px;
+    border: 1px solid white;
 }
 
-.row {
-    margin-left: 0;
-    margin-right: 0;
+.column-title {
+    padding: 15px 30px;
+    word-wrap: break-word;
+    color: #222;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+    background-color: rgba(255, 255, 255, 0.82);
 }
 
-h1 {
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: crimson;
-    text-decoration: underline;
+.column-card-list {
+    list-style: none;
+    margin: 5px;
+    padding: 0;
+    display: block;
+}
+
+.close-pos {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.close-theme {
+    background: inherit;
+    color: black;
+    font-size: 14px;
+    border: none;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+.close-theme:hover,
+.close-theme:focus {
+    background: #009688;
+    color: whitesmoke;
+    font-size: 16px;
+    border-radius: 0 5px 0 0;
+}
+
+.card-placeholder {
+    box-sizing: border-box;
+    display: block;
+    min-height: 60px;
+    margin-bottom: 5px;
+    border: 2px solid lightgrey;
+    background-color: lightblue;
+}
+
+.card {
+    display: block;
+    position: relative;
+    min-height: 30px;
+    overflow: hidden;
+    background: red;
 }
