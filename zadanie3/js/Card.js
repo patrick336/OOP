@@ -7,7 +7,7 @@ function Card(description) {
     function createCard() {
         var $card = $('<li>').addClass('card');
         var $cardDescription = $('<p>').addClass('card-description').text(self.description);
-        var $cardDelete = $('<button>').addClass('btn').text('&times');
+        var $cardDelete = $('<button class="btn btn-trash"><i class="fa fa-trash" aria-hidden="true"></i></button>');
         $cardDelete.click(function () {
             self.removeCard();
         });

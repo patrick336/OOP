@@ -35,6 +35,9 @@ $(function () {
             $column.append($columnTitle).append($columnDelete).append($columnAddCard).append($columnCardList);
             $grid.append($column);
             // ZWRACANIE STWORZONEJ  KOLUMNY
+            
+            var columnsInRow = $('.column-container').find('.column').length;
+            
             return $grid;
         }
     }

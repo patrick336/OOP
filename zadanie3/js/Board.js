@@ -13,7 +13,9 @@ function Board(name) {
         $boardInsert.click(function () {
             self.addTable();
         });
-        $boardDelete.click(function () {});
+        $boardDelete.click(function () {
+            
+        });
     $board.append($boardHeader).append($boardInsert).append($boardDelete).append($columnCointainer);
         return $board;
     }
@@ -32,12 +34,12 @@ $('.create-board').click(function () {
 });
 
 var board = {
-    name: 'Tablica Kanban'
-    , addColumn: function (column) {
+    name: 'Tablica Kanban',
+    addColumn: function (column) {
         this.$element.append(column.$element);
         initSortable();
-    }
-    , $element: $('.column-container .row')
+    }, 
+    $element: $('.column-container .row')
 };
 
 function initSortable() {
@@ -46,16 +48,16 @@ function initSortable() {
         , placeholder: 'card-placeholder'
     });
 }
-$('.create-column').click(function () {
-    var name = prompt('Wpisz nazwę kolumny');
-    var column = new Column(name);
-    board.addColumn(column);
-});
+    $('.create-column').click(function () {
+        var name = prompt('Wpisz nazwę kolumny');
+        var column = new Column(name);
+        board.addColumn(column);
+    });
 //Tworzenie kolumn 
-var todoColumn = new Column('Do zrobienia');
-var doingColumn = new Column('W trakcie');
-var doneColumn = new Column('Wykonane');
-var marked = new Column('Wysłane na produkcje');
+    var todoColumn = new Column('Do zrobienia');
+    var doingColumn = new Column('W trakcie');
+    var doneColumn = new Column('Wykonane');
+    var marked = new Column('Wysłane na produkcje');
 //Dodawanie kolumn do tablicy
 board.addColumn(todoColumn);
 board.addColumn(doingColumn);
@@ -69,3 +71,7 @@ var card3 = new Card('Zlecenie od klienta');
 todoColumn.addCard(card1);
 doingColumn.addCard(card2);
 doneColumn.addCard(card3);
+
+
+
+

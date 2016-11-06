@@ -6,6 +6,7 @@
 
      function createColumn() {
          // TWORZENIE ELEMENTÓW SKŁADOWYCH KOLUMNY
+         var $row = $('<div>').addClass('row');
          var $grid = $('<div>').addClass('col-xs-6 col-md-4 col-lg-3');
          var $column = $('<div>').addClass('column block-center');
          var $columnTitle = $('<h3>').addClass('column-title').text(self.name);
@@ -23,13 +24,17 @@
          // KONSTRUOWANIE ELEMENTU KOLUMNY
          $column.append($columnTitle).append($columnDelete).append($columnAddCard).append($columnCardList);
          $grid.append($column);
+        
+       
+         
          // ZWRACANIE STWORZONEJ  KOLUMNY
          return $grid;
      }
  }
  Column.prototype = {
      addCard: function (card) {
-         this.$element.children('ul').append(card.$element);
+         this.$element.find('ul').append(card.$element);
+//         $('#test').append(card.$element);
      }, 
      removeColumn: function () {
          this.$element.remove();
