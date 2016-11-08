@@ -44,8 +44,8 @@ var board = {
 
 function initSortable() {
     $('.column-card-list').sortable({
-        connectWith: '.column-card-list'
-        , placeholder: 'card-placeholder'
+        connectWith: '.column-card-list',
+        placeholder: 'card-placeholder'
     });
 }
     $('.create-column').click(function () {
@@ -59,19 +59,59 @@ function initSortable() {
     var doneColumn = new Column('Wykonane');
     var marked = new Column('Wysłane na produkcje');
 //Dodawanie kolumn do tablicy
-board.addColumn(todoColumn);
-board.addColumn(doingColumn);
-board.addColumn(doneColumn);
-board.addColumn(marked);
+    board.addColumn(todoColumn);
+    board.addColumn(doingColumn);
+    board.addColumn(doneColumn);
+    board.addColumn(marked);
 //Tworzenie nowych egzemplarzy kart
-var card1 = new Card('Nowe zadanie');
-var card2 = new Card('Stworzyć tablicę kanban');
-var card3 = new Card('Zlecenie od klienta');
+    var card1 = new Card('Nowe zadanie');
+    var card2 = new Card('Stworzyć tablicę kanban');
+    var card3 = new Card('Zlecenie od klienta');
+    var card4 = new Card('Zlecenie od klienta');
+    var card5 = new Card('Stworzyć tablicę kanban');
+    var card6 = new Card('Stworzyć tablicę kanban');
+    var card7 = new Card('Stworzyć tablicę kanban');
+    var card8 = new Card('Stworzyć tablicę kanban');
 // Dodawanie kart do kolumn
-todoColumn.addCard(card1);
-doingColumn.addCard(card2);
-doneColumn.addCard(card3);
+    todoColumn.addCard(card1);
+    todoColumn.addCard(card2);
+    todoColumn.addCard(card4);
+    todoColumn.addCard(card5);
+    todoColumn.addCard(card6);
+    todoColumn.addCard(card7);
+    todoColumn.addCard(card8);
+
+    doingColumn.addCard(card2);
+    doingColumn.addCard(card1);
+    doingColumn.addCard(card3);
+    doneColumn.addCard(card3);
 
 
 
-
+//Kontrola widoku kolumn przy różnej szerokości ekranu
+//$(window).on('resize', function () {
+//    var w = window.outerWidth;
+////    var columns = $('.column-container').find('.col-325');
+////    var columnsArr = $.makeArray(columns);
+////    var length = columnsArr.length;
+//    
+//    $('.col-325').removeClass('clear');
+//    
+//    var c = document.getElementsByClassName("col-325");
+//    console.log(c.length);
+//    if (467 < w && w <= 767) {
+//        for (var i = 0; i < c.length; i = i + 2) {
+//            c[i].className += ' clear';
+//        }
+//    }
+//    else if (767 < w && w <= 1199 ) {
+//        for (var i = 0; i < c.length; i = i + 3) {
+//            c[i].className += ' clear';
+//        }
+//    }
+//    else if (1199 < w) {
+//        for (var i = 0; i < c.length; i = i + 4) {
+//            c[i].className += ' clear';
+//        }
+//    }
+//});

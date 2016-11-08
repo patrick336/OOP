@@ -36,22 +36,23 @@ body {
     border-radius: 3px;
     cursor: pointer;
     font-weight: 600;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .btn:hover,
 .btn:focus {
-   border-color: rgba(0,0,0,0.7);    
-   background-color: rgba(0,0,0,0.7);
-   color: #fff;
+    border-color: rgb(255, 255, 255);
+    background-color: #009688;
+    color: #fff;
+}
+.column-container {
+	margin: 0 auto;
 }
 .column {
     position: relative;
-/*    min-width: 220px;*/
-    max-width: 320px;
-    min-height: 40vh;
     border-radius: 5px;
     border: 1px solid white;
     margin: 0 auto;
+    min-height: 364px;
 }
 
 .column-title {
@@ -68,7 +69,11 @@ body {
     margin: 5px;
     padding: 0;
     display: block;
+    width: 299px;
     min-height: 60px;
+    max-height: 256px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .close-pos {
@@ -94,7 +99,7 @@ body {
     border-radius: 0 5px 0 0;
 }
 .card-description {
-    padding:10px 25px 10px 5px;
+    padding:10px 35px 10px 5px;
     word-wrap: break-word;
     font-size: 14px;
 }
@@ -114,5 +119,9 @@ body {
     overflow: hidden;
 }
 .btn-trash {
-    position: absolute;right: 0;
+    position: absolute;
+    right: 0;
+}
+.clear {
+    clear: both;
 }
